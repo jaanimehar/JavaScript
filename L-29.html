@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise chaining L-29</title>
+</head>
+<body>
+    <script>
+        let p1=new Promise(function(resolev, reject){
+            setTimeout(() => {
+                resolev("oredr is done");
+            }, 2000);
+
+        });
+        p1.then(
+            (value)=>{
+                console.log("This is Promise 1");
+                let p2=new Promise(function(resolev, reject){
+                    setTimeout(() => {
+                        resolev("success")
+                    }, 3000);
+
+                });
+                return p2;
+            }
+        ).then(
+            (value)=>{
+                console.log("This is Promise 2");
+                let p3=new Promise(function(resolev, reject){
+                    setTimeout(() => {
+                        reject("error")
+                    }, 5000);
+
+                });
+                return p3;
+
+            }
+        ).catch(
+            (error)=>{
+                console.log("This is Promise 3 about error");
+
+            }
+        );
+
+        let p4=new Promise(function(resolev, reject){
+                    
+                        // reject("error")
+
+                });
+                console.log(p4);
+    </script>
+</body>
+</html>

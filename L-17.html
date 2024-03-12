@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css change by using DOM L-17</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="div1">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime accusamus nisi commodi adipisci ab
+            tenetur impedit? Quia at amet rerum veritatis cupiditate aspernatur totam modi non! Quos dolores quasi
+            dicta.</p>
+    </div>
+    <ul id="ul1">
+        <li class="item" id="li1">Home</li>
+        <li class="item" id="li2">About</li>
+        <li class="item" id="li3">Contact</li>
+    </ul>
+    <script>
+        // let parent=document.getElementById("div1").style.background="blue";
+        // // parent.style.background="green";
+        // console.log(parent);
+
+        // let para=document.querySelector("p").style.color="white";
+
+        let childlist = document.querySelectorAll("li");
+        for (let i = 0; i < childlist.length; i++) {
+            childlist[i].style.color="red";
+            childlist[i].style.backgroundColor="black";
+
+
+        }
+        console.log(childlist);
+
+
+
+    </script>l
+</body>
+
+</html>

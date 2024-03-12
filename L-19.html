@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event L-19</title>
+</head>
+
+<body>
+    <!-- sunta -->
+    <!-- <element event="some javascript"></element>
+    <!-- eample -->
+    <!-- <h1 onclick="this.innerHTML='This is Eventable heading'">This is heading</h1><br> -->
+    <!-- <button onclick="this.innerHTML=Date()">show date</button><br> -->
+    <!-- event by function -->
+    <!-- <button id="btn1">show date by function</button><br>  -->
+    <img src="bulb_off.png" alt="bulb off" id="myimage" onmousedown="lighton()" onmouseup="lightoff()">
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+        mouse event
+    </h1>
+
+
+    <script>
+        // document.getElementById("btn1").onclick = dateshow;
+        // function dateshow() {
+        //     document.getElementById("btn1").innerHTML = Date();
+        // }
+
+        // function mymessage(){
+        //     alert("this is message was by onload event");
+        // }
+        // mymessage();
+        function lighton() {
+            document.getElementById("myimage").src = "bulb_on.png"
+        }
+        function lightoff() {
+            document.getElementById("myimage").src = "bulb_off.png"
+        }
+
+    </script>
+
+
+</body>
+
+</html>

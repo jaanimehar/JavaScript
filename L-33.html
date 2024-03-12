@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures L-33</title>
+</head>
+
+<body>
+    <script>
+        // closures
+        // galobal varabile
+        let a = "HELLO! world good morning";
+
+        // this is an outer function.
+        function f1() {
+            // local varaible
+            let b = "WORLD";
+            let c = 23;
+            let d = 45;
+            console.log("this outer function or parent function");
+            console.log("This is " + a + " " + b);
+
+            // create an inner function
+            // closures 
+            function add() {
+                // local varaible
+                let e = c + d;
+                let s = "This is a string of closure";
+                console.log("this inner function or closures or child function");
+
+                console.log("this is sum of two number=" + e)
+                console.log(b);
+                console.log(s);
+
+                function multiply() {
+                    console.log("this is closures multiply function");
+                    console.log(c * d);
+                    console.log(a);
+
+
+
+                }
+                multiply();
+            }
+            b = "the wwwww";
+            return add;
+        }
+        let f = f1();
+        f();
+    </script>
+</body>
+
+</html>

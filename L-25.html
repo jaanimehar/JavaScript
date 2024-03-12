@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON L-25</title>
+</head>
+
+<body>
+    <script>
+        // json synt;
+        let ob1 = {
+            "name": "sohan",
+            "DOB": 30,
+            "univrsity": "jmi",
+        }
+        // js object;
+        let ob2 = {
+            name: "rohan kumar",
+            DOB: 1997,
+            University: "DU",
+        }
+        // data send on server in string form;
+        let myjson = JSON.stringify(ob2);
+        console.log(ob2);
+        console.log(myjson);
+        let change=myjson.replace("DU","BHU");
+        console.log(change);
+
+        // data receive from server by using parse;
+        let my2json=JSON.parse(myjson);
+        console.log(my2json);
+
+
+
+
+    </script>
+</body>
+
+</html>

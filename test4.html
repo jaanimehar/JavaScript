@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ob1 = {
+            name: ["mehar", "saifi", "jmi"],
+            DOB: 1997,
+            show() {
+                this.name.forEach(s=(student)=>{
+                    console.log(this.DOB+" "+student);
+
+                });
+            }
+        }
+        ob1.show();
+
+        function show(){
+            console.log("Hello simple function");
+        }
+        show();
+        // arrow function:
+        display=()=>console.log("Hello arrow function");
+        display();
+        let hello=(a, b)=>console.log(a+b);
+        hello(2,45);
+        let b=23; 
+        console.log(this.ob1);
+    </script>
+</body>
+
+</html>

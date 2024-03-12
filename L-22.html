@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object L-22</title>
+</head>
+
+<body>
+
+    <p id="p1">para</p>
+    <script>
+        // there is 9 way to create Date Object
+        let d1 = new Date();
+        console.log(d1);
+
+        let d2 = new Date("2024-12-4");
+        console.log(d2);
+
+        // let d3=new Date(10000000000);
+        // console.log(d3);
+
+        // let d4=new Date(year, month, day, hour, minute, second, ms);
+        let d4 = new Date(3050, 11, 5, 6, 36, 45, 100);
+        console.log(d4);
+
+        // get date;
+        let yr = d4.getFullYear();
+        console.log("The year is=", yr);
+
+        let month = d4.getMonth();
+        console.log("The month is=", month);
+
+        let day = d4.getDay();
+        console.log("The day is=", day);
+
+        let hour = d4.getHours();
+        console.log("The hours is=", hour);
+
+        let d = d4.getDate();
+        console.log("The date is=", d);
+
+        // set date;
+        d4.setDate(11);
+        console.log(d4);
+        d4.setMonth(8);
+        console.log(d4);
+        d4.setMinutes(55);
+        console.log(d4); 
+        d4.setHours(4);
+        console.log(d4);
+
+        setInterval(f1, 100);
+        function f1(){
+            let time=document.getElementById("p1").innerHTML=new Date();
+        }
+        
+    </script>
+
+</body>
+
+</html>

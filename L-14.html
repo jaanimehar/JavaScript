@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set or change L-14</title>
+</head>
+
+<body>
+    <p id="p1">This is paragraph</p>
+    <div id="div1"></div>
+    <p>
+        <table>
+            
+        </table>
+    </p>
+    <script>
+        // get
+        let g = document.getElementById("p1");
+        console.log(g);
+        // set or change
+        let s = document.getElementById("p1").innerHTML = "This is changing paragraph";
+        console.log(s);
+        // set html element by using innerHTMl proprty;
+        let element=document.getElementById("div1").innerHTML="<h1>This is add heading.</h1>"
+        console.log(element);
+
+    </script>
+</body>
+
+</html>

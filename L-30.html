@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promiose API L-30</title>
+</head>
+<body>
+    <script>
+        let p1= new Promise(function(resolve,reject){
+            setTimeout(() => {
+                resolve("this is promoise 1");
+            }, 2000);
+
+        });
+        let p2= new Promise(function(resolve,reject){
+            setTimeout(() => {
+                resolve("this is promoise 2");
+            }, 4000);
+
+        });
+        let p3= new Promise(function(resolve,reject){
+            setTimeout(() => {
+                reject("this is promoise 3");
+            }, 5000);
+
+        });
+        // p1.then(
+        //     (value)=>{
+        //         console.log(value);
+        //     }
+        // );
+        // p2.then(
+        //     (value)=>{
+        //         console.log(value);
+        //     }
+        // );
+        // p3.then(
+        //     (value)=>{
+        //         console.log(value);
+        //     }
+        // );
+        let allpromise=Promise.reject([p1,p2,p3]);
+        allpromise.then(
+            (value)=>{
+                console.log(value);
+            }
+        );
+
+    </script>
+</body>
+</html>

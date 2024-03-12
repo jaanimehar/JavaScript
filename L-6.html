@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope L-6</title>
+</head>
+
+<body>
+    <script>
+        // global scope
+        var a = 10;
+        var b = 120;
+        console.log("a=" + a);
+        console.log("b=" + b);
+        function add() {
+            var c;
+            c = a + b;
+            console.log("Sum of a and b=" + c);
+        }
+        add();
+        //  function scope
+        function my() {
+            var x = 30;
+            var y = 40;
+            console.log("x=" + x);
+            console.log("y=" + y);
+            var z = x + y;
+            console.log("sum of x and y=" + z);
+        }
+        my();
+
+        // block scope
+        {
+            let l=100;
+            let v=450;
+            console.log("l="+l);
+            console.log("v="+v);
+
+        }
+        function block(){
+           let w=l+v;
+            console.log(w);
+        }
+        block();
+
+
+
+
+    </script>
+</body>
+
+</html>

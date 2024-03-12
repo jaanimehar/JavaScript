@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>then and catch L-28</title>
+</head>
+<body>
+    <script>
+        // let p1=new Promise(function(resolve, reject){
+        //     console.log(reject("error"));
+        // });
+        // console.log(p1);
+        let p1=new Promise(function(resolve, reject){
+            resolve("success");
+        });
+        p1.then(
+            (value)=>{
+                console.log("ok");
+            }
+        );
+        let p2=new Promise(function(resolve, reject){
+            console.log(reject("error"));
+        });
+        p2.catch(
+            (error)=>{
+                console.log("we get error");
+            }
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Enviornment L-32</title>
+</head>
+
+<body>
+   <script>
+    // gloabal varaible
+   let a=12;
+   let b=23;
+
+    function f1(){
+        // local varaible
+        let c=a+b;
+        let d=34;
+        console.log("this is sum of two number="+c)
+
+        function f2(){
+            let e=d*c;
+        console.log("this is multiply of two number="+e)
+
+
+        }
+        f2();
+    
+    }
+    f1();
+    // record enviornment
+    // refences enviornment
+   </script>
+</body>
+
+</html>

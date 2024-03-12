@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback L-26</title>
+</head>
+<body>
+    <script>
+        // sync:
+        // let a=prompt("what is ur name");
+        // let b=prompt("what is ur age");
+        // let c=prompt("what is ur DOB");
+
+        // async;
+        // console.log("FIRST");
+        // setTimeout(f1, 3000);
+        // function f1(){
+        // console.log("SECOND");
+
+        // }
+        // console.log("THIRD");
+
+        // first code;
+        // function f1(){
+        //     console.log("HELLO F1");
+        // }
+        // function f2(){
+        //     console.log("HELLO F2");
+        // }
+        // f2();
+        // f1();
+
+        // second code;
+        // function displplay(value){
+        //     console.log(value);
+
+        // }
+        // function f1(){
+        //     displplay("HELLO F1");
+        // }
+        // function f2(){
+        //     displplay("HELLO F2");
+        // }
+        // f1();
+        // f2();
+
+        // 3rd code;
+        // function displplay(value){
+        //     console.log(value);
+
+        // }
+        // function calculation(a,b){
+        //     let sum=a+b;
+        //     return sum;
+        // }
+        // let result=calculation(2, 45);
+        // displplay(result);
+
+        // 4rd code;
+        // function displplay(value){
+        //     console.log(value);
+
+        // }
+        // function calculation(a,b){
+        //     let sum=a+b;
+        //     displplay(sum);
+        // }
+        // calculation(2, 100);
+
+        // callback;
+
+        function display(value){
+            console.log(value);
+        }
+        
+        function calculation(a,b, mycallback){
+            let sum=a+b;
+            mycallback(sum);
+        }
+        calculation(12,34, display);
+        
+
+
+
+
+    </script>
+</body>
+</html>

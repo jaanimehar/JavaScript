@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise L-27</title>
+</head>
+
+<body>
+    <script>
+        // promise synt;
+        let mypromise = new Promise(function (resolve, reject) {
+            // producing code
+            resolve();
+            reject();
+        });
+        // consuming code;
+        mypromise.then(
+            function (value) {
+                // code succes;
+            },
+            function (error) {
+                // code give some error;
+
+            }
+        );
+
+        let p1=new Promise((resolev,reject)=>{
+            resolev("Code is done");
+
+        });
+        p1.then((value)=>{
+            console.log("success");
+
+        });
+        
+        let p2=new Promise((resolev,reject)=>{
+            reject("error");
+
+        });
+        p2.catch((error)=>{
+            console.log("error");
+
+        });
+
+    </script>
+</body>
+
+</html>

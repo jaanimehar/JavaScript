@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        let myPromise= new Promise (function(resolve, reject){
+            // resolve("promise is done"); 
+            reject("promise is break");
+
+        }); 
+        myPromise
+        .then(
+            function(value){
+                console.log("code is success");
+            },
+            function(error){
+                console.log("code is error");
+            }
+        );
+        .then((value)=>{
+            console.log(" second code is success");
+
+        });
+        myPromise.catch((error)=>{
+            console.log("catch is success");
+
+        });
+        console.log(myPromise);
+    </script>
+</body>
+</html>

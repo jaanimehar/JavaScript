@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/await L-31</title>
+</head>
+
+<body>
+    <script>
+        // async function f1(){
+        //     return "hello world";
+
+        // }
+        // f1().then(alert);
+
+        async function f2() {
+            let p1 = new Promise(function (resolve) {
+                setTimeout(() => {
+                    resolve("this is first promise");
+
+                }, 2000);
+            });
+
+            let p2 = new Promise(function (resolve) {
+                setTimeout(() => {
+                    resolve("this is second promise");
+
+                }, 4000);
+            });
+
+            console.log("read and write promise p1...");
+            let a = await p1;
+            console.log("read and write promise p1..." + a);
+            console.log("read and write promise p2...");
+            let b = await p2;
+            console.log("read and write promise p2..." + b);
+            return [p1, p2];
+        }
+        async function f3() {
+            console.log("this is f3 and it is not continously run...");
+        }
+
+        async function result() {
+
+            let c = await f2();
+            let d = await f3();
+
+            return [c,d];
+        }
+        result();
+    </script>
+</body>
+
+</html>

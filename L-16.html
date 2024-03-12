@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element L-16</title>
+</head>
+<body>
+    <p id="p1">This is p1 para.</p>
+     <div id="div1">
+        <p id="p2">this is p2 para of div.</p>
+        <p id="p3">this is p3 para of div.</p>
+        <p id="p4">this is p4 para of div.</p>
+
+    </div>
+    <script>
+        // remove element
+        // let para=document.getElementById("p1");
+        // console.log(para);
+        // para.remove();
+        // remove child
+        // let parent=document.getElementById("div1");
+        // let child=document.getElementById("p3");
+        // parent.removeChild(child)
+        // replace element
+        let heading=document.createElement("h1");
+        console.log(heading);
+        let node=document.createTextNode("This is a heading.");
+        heading.appendChild(node);
+        let parent=document.getElementById("div1");
+        parent.appendChild(heading);
+        let p3=document.getElementById("p3");
+        parent.replaceChild(heading, p3);
+
+
+
+    </script>
+</body>
+</html>

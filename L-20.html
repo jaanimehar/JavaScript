@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener L-20</title>
+</head>
+
+<body>
+    <button id="btn">try it</button>
+    <p id="p1">para</p>
+    <script>
+        // element.addEventListener(event, function, useCapture);
+        // document.getElementById("btn").addEventListener("click", function(){
+        //     alert("Hello world!");
+        // });
+
+        // document.getElementById("btn").addEventListener("click",show);
+
+        // function show(){
+        //     alert("EVENT LISTENER");
+        // }
+
+        let e=document.getElementById("btn");
+        let p=document.getElementById("p1");
+        e.addEventListener("click", f1);
+        e.addEventListener("mouseover", f2);
+        e.addEventListener(" ut", f3);
+        
+        function f1() {
+            alert("EVENT LISTENER treeka no. 3rd");
+        }
+        function f2(){
+            p.innerHTML="mouseover";
+
+        }
+        function f3(){
+            p.innerHTML="mouseout";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
